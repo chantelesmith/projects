@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="UTF-8">
+	<title>UI5 - Hello World</title>
+
+	<script id="sap-ui-bootstrap" 
+			type="text/javascript" 
+			src="/ui5/latest/resources/sap-ui-core.js"
+			data-sap-ui-theme="sap_bluecrystal"
+			data-sap-ui-libs="sap.m"></script>
+
+		<script type="text/javascript">
+		jQuery.sap.require("sap.m.messageBox")
+
+		 new sap.m.Input("nameField", {
+		 	placeholder: "What is your name?"
+
+		 }).placeAt("content");
+
+			new sap.m.Button({
+				text: "Hello",
+				icon: "sap-icon://accept",
+				press: function(){
+					var sName = sap.ui.getCore().byId("nameField").getValue();
+					sap.m.messageBox.alert("Hello " +sName);
+				}
+			}).placeAt("content");
+	</script>
+</head>
+<body id="content" class="sapUiBody">
+Hello World
+</body>
+</html>

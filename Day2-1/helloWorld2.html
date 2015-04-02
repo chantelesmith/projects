@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="UTF-8">
+	<title>UI5 - Hello World</title>
+
+	<script id="sap-ui-bootstrap" 
+			type="text/javascript" 
+			src="/ui5/latest/resources/sap-ui-core.js"
+			data-sap-ui-theme="sap_bluecrystal"
+			data-sap-ui-libs="sap.m"></script>
+
+	<script type="text/javascript">
+	jQuery.sap.require("sap.m.messageBox")
+	var b = new sap.m.Button()
+	b.placeAt("content")
+	b.setText("Save")
+	b.setIcon("sap-icon://accept")
+	b.attachPress(function(){sap.m.messageBox.alert("Hello")})
+	</script>
+</head>
+<body id="content" class="sapUiBody">
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<mvc:View
+	controllerName="chanzo.controller.App"
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true"
+	xmlns="sap.m">
+
+	<l:Grid 
+		defaultSpan= "L5 M7 S12">
+		<l:content>
+
+	<Input id="nameField"
+		placeholder="What is your name?"
+		value ="{/defaultName}" />
+	<Input
+		enabled="false"
+		value="Your name is: {/defaultName}" />
+
+	<Button
+		text = "Hello"
+		icon = "sap-icon://accept"
+		press = "onPress" />
+
+	<Input
+		enabled = "false"
+		value= "{path : '/newTime', formatter : 'chanzo.util.Formatter.timeOfDay'}"/> 
+	</l:content>
+
+	</l:Grid>
+
+<!-- 	<l:Grid
+		defaultSpan="L3 M5 S12">
+		<Image
+			src="picf-1-4.jpg"
+			width = "100%"
+			height = "25%" />
+
+	</l:Grid> -->
+
+</mvc:View>
+
+<!-- 		// return new sap.m.VBox({
+		// 	items : [
+		// 		new sap.m.Input("nameField", {
+		//  		placeholder: "What is your name?"
+
+		//  		}),
+		// 		new sap.m.Button({
+		// 		text: "Hello",
+		// 		icon: "sap-icon://accept",
+		// 		press: function(){
+		// 			var sName = sap.ui.getCore().byId("nameField").getValue();
+		// 			sap.m.messageBox.alert("Hello " +sName);
+		// 			}
+		// 		})
+		// 	]
+		// }) -->
